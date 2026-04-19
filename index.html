@@ -20,112 +20,15 @@
     rel="stylesheet"
   />
 
+  <link rel="stylesheet" href="styles.css" />
+
   <style>
-    :root {
-      --primary-color: #0d6efd;
-      --secondary-color: #6c757d;
-      --background-color: #ffffff;
-      --footer-bg: #212529;
-      --text-main: #212529;
-    }
-
-    body {
-      background-color: var(--background-color);
-      color: var(--text-main);
-      font-family: 'Lato', sans-serif;
-    }
-
-    h1, h2, h3, h4, h5, h6,
-    .navbar-brand {
-      font-family: 'Inter', sans-serif;
-    }
-
-    h1, h2, h3 {
-      font-weight: 700;
-    }
-
-    h4, h5, h6 {
-      font-weight: 600;
-    }
-
-    .navbar {
-      background-color: var(--primary-color) !important;
-    }
-
-    .navbar .nav-link,
-    .navbar .navbar-brand {
-      color: #ffffff !important;
-      font-weight: 500;
-    }
-
-    .navbar .nav-link:hover,
-    .navbar .nav-link:focus {
-      color: #eaf2ff !important;
-    }
-
-    .navbar .form-control {
-      background-color: #ffffff;
-      color: #212529;
-      border-color: rgba(255, 255, 255, 0.35);
-    }
-
-    .navbar .form-control::placeholder {
-      color: #6c757d;
-      opacity: 1;
-    }
-
-    .navbar .form-control:focus {
-      color: #212529;
-      background-color: #ffffff;
-      border-color: #ffffff;
-      box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
-    }
-
-    .navbar .btn-search {
-      background-color: #ffffff;
-      color: #212529;
-      border: 1px solid #ffffff;
-      font-weight: 500;
-    }
-
-    .navbar .btn-search i,
-    .navbar .btn-search span {
-      color: #212529;
-    }
-
-    .navbar .btn-search:hover,
-    .navbar .btn-search:focus {
-      background-color: #f8f9fa;
-      color: #212529;
-      border-color: #f8f9fa;
-    }
-
-    .card {
-      border: none;
-      border-radius: 1rem;
-      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
-    }
-
     .category-card {
       transition: transform 0.2s ease;
     }
 
     .category-card:hover {
       transform: translateY(-4px);
-    }
-
-    .footer-dark {
-      background-color: var(--footer-bg);
-    }
-
-    .footer-dark .btn {
-      color: #ffffff;
-      border-color: rgba(255, 255, 255, 0.35);
-    }
-
-    .footer-dark .btn:hover {
-      background-color: rgba(255, 255, 255, 0.08);
-      color: #ffffff;
     }
   </style>
 </head>
@@ -232,6 +135,16 @@
             <div class="card-body text-center">
               <a href="search_browse_listings.html" class="btn btn-outline-primary w-100">
                 <i class="bi bi-grid me-1"></i>Category 5
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="card category-card">
+            <div class="card-body text-center">
+              <a href="search_browse_listings.html" class="btn btn-outline-primary w-100">
+                <i class="bi bi-grid me-1"></i>Category 6
               </a>
             </div>
           </div>
