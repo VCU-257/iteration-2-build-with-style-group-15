@@ -11,4 +11,4 @@ I asked how to implement dynamic UI interactions using JavaScript and Bootstrap,
 The AI helped me understand how to use JavaScript event listeners to detect form submission and display Bootstrap alerts dynamically. I learned how to prevent the default form submission behavior using event.preventDefault(), how to update the UI using classList, and how to control the timing of actions using setTimeout().
 
 ## 3. Live Site Link
-**Live URL:** [Insert Your GitHub Pages Link Here]
+**Live URL:** https://vcu-257.github.io/iteration-2-build-with-style-group-15/login.html
