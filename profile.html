@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile – GearHub</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Lato:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .avatar-circle {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background-color: var(--primary-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      color: #fff;
+    }
+
+    .order-badge {
+      font-size: 0.75rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-grid me-2"></i>GearHub</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <form class="d-flex mx-lg-auto my-2 my-lg-0" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search products" aria-label="Search products" />
+          <button class="btn btn-search" type="submit">
+            <i class="bi bi-search me-1"></i><span>Search</span>
+          </button>
+        </form>
+
+        <ul class="navbar-nav ms-lg-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house me-1"></i>Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-bell me-1"></i>Notifications</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html"><i class="bi bi-cart3 me-1"></i>Cart</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-question-circle me-1"></i>Help</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="profile.html"><i
+                class="bi bi-person-circle me-1"></i>Profile</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-4">
+
+    <!-- Profile Header -->
+    <div class="card mb-4">
+      <div class="card-body d-flex flex-column flex-sm-row align-items-center gap-4">
+        <div class="avatar-circle flex-shrink-0">
+          <i class="bi bi-person-fill"></i>
+        </div>
+        <div class="flex-grow-1 text-center text-sm-start">
+          <h1 class="h3 mb-1" id="profileName">Jane Doe</h1>
+          <p class="text-secondary mb-0" id="profileEmail">jane.doe@example.com</p>
+        </div>
+        <div class="d-flex flex-wrap gap-2 justify-content-center">
+          <a href="login.html" class="btn btn-outline-secondary btn-sm">
+            <i class="bi bi-box-arrow-right me-1"></i>Sign Out
+          </a>
+          <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editProfileModal">
+            <i class="bi bi-pencil me-1"></i>Edit Profile
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Left column -->
+      <div class="col-lg-8">
+
+        <!-- Order History -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <h2 class="h5 mb-3"><i class="bi bi-clock-history me-2"></i>Order History</h2>
+
+            <div class="list-group list-group-flush">
+              <div class="list-group-item px-0">
+                <div class="d-flex justify-content-between align-items-start">
+                  <div>
+                    <p class="mb-1 fw-semibold">Order #10042</p>
+                    <p class="mb-0 text-secondary small">Product 1, Product 3 &middot; Apr 10, 2026</p>
+                  </div>
+                  <span class="badge bg-success order-badge">Delivered</span>
+                </div>
+                <p class="mb-0 text-secondary small mt-1">Total: $49.98</p>
+              </div>
+
+              <div class="list-group-item px-0">
+                <div class="d-flex justify-content-between align-items-start">
+                  <div>
+                    <p class="mb-1 fw-semibold">Order #10031</p>
+                    <p class="mb-0 text-secondary small">New Product 2 &middot; Mar 28, 2026</p>
+                  </div>
+                  <span class="badge bg-primary order-badge">Shipped</span>
+                </div>
+                <p class="mb-0 text-secondary small mt-1">Total: $22.49</p>
+              </div>
+
+              <div class="list-group-item px-0">
+                <div class="d-flex justify-content-between align-items-start">
+                  <div>
+                    <p class="mb-1 fw-semibold">Order #10018</p>
+                    <p class="mb-0 text-secondary small">Product 4 &middot; Mar 5, 2026</p>
+                  </div>
+                  <span class="badge bg-success order-badge">Delivered</span>
+                </div>
+                <p class="mb-0 text-secondary small mt-1">Total: $34.99</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Saved Payment Methods -->
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h2 class="h5 mb-0"><i class="bi bi-credit-card me-2"></i>Saved Payment Methods</h2>
+              <a href="payment.html" class="btn btn-outline-primary btn-sm">
+                <i class="bi bi-plus-circle me-1"></i>Add New
+              </a>
+            </div>
+
+            <div class="list-group list-group-flush">
+              <div class="list-group-item px-0 d-flex justify-content-between align-items-center">
+                <div>
+                  <i class="bi bi-credit-card-2-front me-2 text-primary"></i>
+                  <span class="fw-semibold">Visa</span>
+                  <span class="text-secondary ms-2">&bull;&bull;&bull;&bull; 4242</span>
+                </div>
+                <span class="badge bg-light text-dark border">Default</span>
+              </div>
+              <div class="list-group-item px-0 d-flex justify-content-between align-items-center">
+                <div>
+                  <i class="bi bi-credit-card-2-front me-2 text-secondary"></i>
+                  <span class="fw-semibold">Mastercard</span>
+                  <span class="text-secondary ms-2">&bull;&bull;&bull;&bull; 8181</span>
+                </div>
+                <a href="payment.html" class="btn btn-link btn-sm p-0 text-primary">Use</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right column -->
+      <div class="col-lg-4">
+
+        <!-- Quick Actions -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <h2 class="h5 mb-3"><i class="bi bi-lightning me-2"></i>Quick Actions</h2>
+            <div class="d-grid gap-2">
+              <a href="cart.html" class="btn btn-outline-primary">
+                <i class="bi bi-cart3 me-1"></i>View Cart
+              </a>
+              <a href="payment.html" class="btn btn-outline-primary">
+                <i class="bi bi-credit-card me-1"></i>Go to Payment
+              </a>
+              <a href="index.html" class="btn btn-outline-primary">
+                <i class="bi bi-shop me-1"></i>Continue Shopping
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Account Details -->
+        <div class="card">
+          <div class="card-body">
+            <h2 class="h5 mb-3"><i class="bi bi-person-lines-fill me-2"></i>Account Details</h2>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2">
+                <span class="text-secondary small">Member since</span><br />
+                <span class="fw-semibold">January 2025</span>
+              </li>
+              <li class="mb-2">
+                <span class="text-secondary small">Orders placed</span><br />
+                <span class="fw-semibold">3</span>
+              </li>
+              <li>
+                <span class="text-secondary small">Shipping address</span><br />
+                <span class="fw-semibold">123 Main St, Richmond, VA 23220</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Edit Profile Modal -->
+  <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title h5" id="editProfileModalLabel"><i class="bi bi-pencil me-2"></i>Edit Profile</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="editProfileAlert" class="alert alert-success d-none" role="alert">
+            Profile updated successfully!
+          </div>
+          <form id="editProfileForm">
+            <div class="mb-3">
+              <label for="editName" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="editName" value="Jane Doe" required />
+            </div>
+            <div class="mb-3">
+              <label for="editEmail" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="editEmail" value="jane.doe@example.com" required />
+            </div>
+            <div class="mb-3">
+              <label for="editAddress" class="form-label">Shipping Address</label>
+              <input type="text" class="form-control" id="editAddress" value="123 Main St, Richmond, VA 23220" />
+            </div>
+            <hr />
+            <p class="text-secondary small mb-2">Leave blank to keep current password</p>
+            <div class="mb-3">
+              <label for="editPassword" class="form-label">New Password</label>
+              <input type="password" class="form-control" id="editPassword" />
+            </div>
+            <div class="mb-3">
+              <label for="editConfirmPassword" class="form-label">Confirm New Password</label>
+              <input type="password" class="form-control" id="editConfirmPassword" />
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" id="saveProfileBtn">
+            <i class="bi bi-check-circle me-1"></i>Save Changes
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-dark border-top py-4">
+    <div class="container text-center">
+      <div class="d-flex flex-wrap justify-content-center gap-2">
+        <a href="#" class="btn btn-outline-light"><i class="bi bi-question-circle me-1"></i>Help</a>
+        <a href="#" class="btn btn-outline-light"><i class="bi bi-envelope me-1"></i>Contact</a>
+        <a href="#" class="btn btn-outline-light"><i class="bi bi-info-circle me-1"></i>About</a>
+        <a href="#" class="btn btn-outline-light"><i class="bi bi-file-earmark-text me-1"></i>Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const saveProfileBtn = document.getElementById('saveProfileBtn');
+    const editProfileAlert = document.getElementById('editProfileAlert');
+    const profileName = document.getElementById('profileName');
+    const profileEmail = document.getElementById('profileEmail');
+
+    saveProfileBtn.addEventListener('click', () => {
+      const name = document.getElementById('editName').value.trim();
+      const email = document.getElementById('editEmail').value.trim();
+      const password = document.getElementById('editPassword').value;
+      const confirmPassword = document.getElementById('editConfirmPassword').value;
+
+      if (!name || !email) return;
+
+      if (password && password !== confirmPassword) {
+        editProfileAlert.textContent = 'Passwords do not match.';
+        editProfileAlert.classList.remove('d-none', 'alert-success');
+        editProfileAlert.classList.add('alert-danger');
+        return;
+      }
+
+      profileName.textContent = name;
+      profileEmail.textContent = email;
+
+      editProfileAlert.textContent = 'Profile updated successfully!';
+      editProfileAlert.classList.remove('d-none', 'alert-danger');
+      editProfileAlert.classList.add('alert-success');
+
+      setTimeout(() => {
+        const modal = bootstrap.Modal.getInstance(document.getElementById('editProfileModal'));
+        modal.hide();
+        editProfileAlert.classList.add('d-none');
+      }, 1200);
+    });
+  </script>
+
+</body>
+</html>
